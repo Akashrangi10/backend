@@ -21,12 +21,12 @@ from usrs import views as usrsview
 
 router = routers.DefaultRouter()
 router.register(r'todos', views.TodoView, 'todo')
-# usersrouter = routers.DefaultRouter()
-# usersrouter.register(r'user', usrsview.Usersview, 'usrs')
+usersrouter = routers.DefaultRouter()
+usersrouter.register(r'user', usrsview.Usersview, 'usrs')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('todos/',include('todo.urls')),
-    # path('users/',include(usersrouter.urls))
+    # path('todos/',include('todo.urls')),
+    path('users/',include(usersrouter.urls))
 ]

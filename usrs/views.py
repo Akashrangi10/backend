@@ -9,3 +9,5 @@ import json
 class Usersview(viewsets.ModelViewSet):
     serializer_class = UsersSerializer
     queryset = CustomUser.objects.all()
+    # queryset = CustomUser.objects.values('id','username','first_name','last_name','email','password',"is_superuser")
+

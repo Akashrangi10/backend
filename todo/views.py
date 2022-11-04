@@ -12,7 +12,6 @@ class TodoView(viewsets.ModelViewSet):
 
 
 def todo_list_view(request):
-    print("******")
     todo_data = Todo.objects.values('title','description','completed')
         
     # todo_datas = json.loads(todo_data[0])
